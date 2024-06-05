@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wino w Willi</title>
+    <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-image">
+            <img src="https://i.ibb.co/mvSVtHg/Header.png" alt="Wino w Willi">
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">O FESTIWALU</a></li>
+            <li><a href="#">ATRAKCJE</a></li>
+            <li><a href="#">ZAPISY</a></li>
+        </ul>
+    </nav>
+
+    <!-- O FESTIWALU Section -->
+    <section id="o-festiwalu" class="fade-in">
+        <h1>Pierwszy taki festiwal w Polsce!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <!-- Atrakcje Section -->
+    <section id="atrakcje" class="fade-in">
+        <h1>Atrakcje</h1>
+        <div class="attraction-list">
+            <div class="attraction-item">
+                <img src="placeholder-icon.png" alt="Icon">
+                <p>Darmowe degustacje</p>
+            </div>
+            <div class="attraction-item">
+                <img src="placeholder-icon.png" alt="Icon">
+                <p>Owoce morza</p>
+            </div>
+            <div class="attraction-item">
+                <img src="placeholder-icon.png" alt="Icon">
+                <p>Pizza z En Plato</p>
+            </div>
+            <div class="attraction-item">
+                <img src="placeholder-icon.png" alt="Icon">
+                <p>Lody</p>
+            </div>
+            <div class="attraction-item">
+                <img src="placeholder-icon.png" alt="Icon">
+                <p>Animacje dla dzieci</p>
+            </div>
+        </div>
+        <p class="attraction-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <!-- Zapisy Section -->
+    <section id="zapisy" class="fade-in">
+        <h1>Zapisy</h1>
+        <form action="mailto:juchniewiczt@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="first-name">Imię:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Nazwisko:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Firma:</label>
+                <input type="text" id="company" name="company" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Nr telefonu:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Wyślij</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const nav = document.querySelector('nav');
+
+            function fadeInOnScroll() {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                sections.forEach(section => {
+                    if (scrollPosition > section.offsetTop + 100) {
+                        section.classList.add('visible');
+                    }
+                });
+
+                // Fade in nav if not already visible
+                if (scrollPosition > 100) {
+                    nav.classList.add('visible');
+                }
+            }
+
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll(); // Trigger on load to fade in elements already in view
+        });
+    </script>
+</body>
+</html>

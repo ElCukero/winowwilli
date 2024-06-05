@@ -1,0 +1,181 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+  
+header {
+    width: 100%;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures no space below the image */
+}
+
+nav {
+    background-color: #f2f2f2;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+  font-family: 'Anton', sans-serif;
+    color: #231f20;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #faac2b;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+      
+#o-festiwalu {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#o-festiwalu h1 {
+  font-family: "Passion One", sans-serif;  
+  font-size: 30px;
+    margin-bottom: 50px;
+}
+
+#o-festiwalu p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px; /* Adds space between paragraphs */
+}
+
+#atrakcje {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#atrakcje h1 {
+    font-family: "Passion One", sans-serif;
+    font-size: 30px;
+    margin-bottom: 50 px;
+}
+
+.attraction-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.attraction-item {
+    text-align: center;
+    width: 150px;
+}
+
+.attraction-item img {
+    width: 100%;
+    height: auto;
+}
+
+.attraction-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.attraction-description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto 0; /* Centers the text and adds space above */
+    text-align: center;
+}
+
+#zapisy {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#zapisy h1 {
+  font-family: "Passion One", sans-serif;  
+  font-size: 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    color: #231f20;
+    background-color: #f1ede4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.form-group button:hover {
+    background-color: #fbc7af;
+}
