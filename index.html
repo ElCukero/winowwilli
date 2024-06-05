@@ -11,17 +11,16 @@
     <!-- Header Section -->
     <header>
         <div class="header-image">
-            <img src="https://i.ibb.co/mvSVtHg/Header.png" alt="Wino w Willi">
+            <img src="https://i.ibb.co/RcrSJJN/headerprod.png" alt="Wino w Willi">
         </div>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">O FESTIWALU</a></li>
-            <li><a href="#">ATRAKCJE</a></li>
-            <li><a href="#">ZAPISY</a></li>
+        <ul>            
+            <li><a href="#o-festiwalu">FESTIWAL</a></li>
+            <li><a href="#atrakcje">ATRAKCJE</a></li>
+            <li><a href="#zapisy">ZAPISY</a></li>
         </ul>
     </nav>
 
@@ -64,6 +63,7 @@
     <section id="zapisy" class="fade-in">
         <h1>Zapisy</h1>
         <form action="mailto:juchniewiczt@gmail.com" method="post" enctype="text/plain">
+          
             <div class="form-group">
                 <label for="first-name">Imię:</label>
                 <input type="text" id="first-name" name="first-name" required>
@@ -89,7 +89,13 @@
             </div>
         </form>
     </section>
-
+<!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            © 2024 Wino w Willi. Designed by Lubish.
+        </div>
+        
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
@@ -112,6 +118,7 @@
             window.addEventListener('scroll', fadeInOnScroll);
             fadeInOnScroll(); // Trigger on load to fade in elements already in view
         });
+
     </script>
 </body>
 </html>
