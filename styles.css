@@ -1,124 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wino w Willi</title>
-    <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-image">
-            <img src="https://i.ibb.co/RcrSJJN/headerprod.png" alt="Wino w Willi">
-        </div>
-    </header>
+/* styles.css */
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>            
-            <li><a href="#o-festiwalu">FESTIWAL</a></li>
-            <li><a href="#atrakcje">ATRAKCJE</a></li>
-            <li><a href="#zapisy">ZAPISY</a></li>
-        </ul>
-    </nav>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- O FESTIWALU Section -->
-    <section id="o-festiwalu" class="fade-in">
-        <h1>Pierwszy taki festiwal w Polsce!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+  
+header {
+    width: 100%;
+}
 
-    <!-- Atrakcje Section -->
-    <section id="atrakcje" class="fade-in">
-        <h1>Atrakcje</h1>
-        <div class="attraction-list">
-            <div class="attraction-item">
-                <img src="placeholder-icon.png" alt="Icon">
-                <p>Darmowe degustacje</p>
-            </div>
-            <div class="attraction-item">
-                <img src="placeholder-icon.png" alt="Icon">
-                <p>Owoce morza</p>
-            </div>
-            <div class="attraction-item">
-                <img src="placeholder-icon.png" alt="Icon">
-                <p>Pizza z En Plato</p>
-            </div>
-            <div class="attraction-item">
-                <img src="placeholder-icon.png" alt="Icon">
-                <p>Lody</p>
-            </div>
-            <div class="attraction-item">
-                <img src="placeholder-icon.png" alt="Icon">
-                <p>Animacje dla dzieci</p>
-            </div>
-        </div>
-        <p class="attraction-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+.header-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- Zapisy Section -->
-    <section id="zapisy" class="fade-in">
-        <h1>Zapisy</h1>
-        <form action="mailto:juchniewiczt@gmail.com" method="post" enctype="text/plain">
-          
-            <div class="form-group">
-                <label for="first-name">Imię:</label>
-                <input type="text" id="first-name" name="first-name" required>
-            </div>
-            <div class="form-group">
-                <label for="last-name">Nazwisko:</label>
-                <input type="text" id="last-name" name="last-name" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Firma:</label>
-                <input type="text" id="company" name="company" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Nr telefonu:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Wyślij</button>
-            </div>
-        </form>
-    </section>
-<!-- Footer Section -->
-    <footer>
-        <div class="footer-left">
-            © 2024 Wino w Willi. Designed by Lubish.
-        </div>
-        
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section');
-            const nav = document.querySelector('nav');
+header img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures no space below the image */
+}
 
-            function fadeInOnScroll() {
-                const scrollPosition = window.scrollY + window.innerHeight;
-                sections.forEach(section => {
-                    if (scrollPosition > section.offsetTop + 100) {
-                        section.classList.add('visible');
-                    }
-                });
+nav {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px #dddddd;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
-                // Fade in nav if not already visible
-                if (scrollPosition > 100) {
-                    nav.classList.add('visible');
-                }
-            }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
 
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll(); // Trigger on load to fade in elements already in view
-        });
+nav ul li {
+    margin: 0 15px;
+}
 
-    </script>
-</body>
-</html>
+nav ul li a {
+  font-family: 'Anton', sans-serif;
+    color: #231f20;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #faac2b;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+      
+#o-festiwalu {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#o-festiwalu h1 {
+  font-family: "Passion One", sans-serif;  
+  font-size: 30px;
+    margin-bottom: 50px;
+}
+
+#o-festiwalu p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px; /* Adds space between paragraphs */
+}
+
+#atrakcje {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#atrakcje h1 {
+    font-family: "Passion One", sans-serif;
+    font-size: 30px;
+    margin-bottom: 50 px;
+}
+
+.attraction-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.attraction-item {
+    text-align: center;
+    width: 150px;
+}
+
+.attraction-item img {
+    width: 100%;
+    height: auto;
+}
+
+.attraction-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.attraction-description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto 0; /* Centers the text and adds space above */
+    text-align: center;
+}
+
+#zapisy {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#zapisy h1 {
+  font-family: "Passion One", sans-serif;  
+  font-size: 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    color: #231f20;
+    background-color: #f1ede4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.form-group button:hover {
+    background-color: #fbc7af;
+}
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Ensuring font consistency */
+}
+
+.footer-left {
+    flex: 1;
+    text-align: center;
+}
