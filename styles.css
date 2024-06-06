@@ -107,13 +107,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .social-media-icons {
-        position: relative; /* Change position to relative for mobile */
-        top: auto;
-        right: auto;
-        transform: none;
-        margin-top: 20px;
-        flex-direction: row;
-        justify-content: center;
+        display: none; /* Hide icons on mobile */
     }
 
     .hero-content {
@@ -146,7 +140,6 @@ body {
         font-size: 14px;
     }
 }
-
 
 
 #o-festiwalu {
