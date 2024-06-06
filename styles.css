@@ -107,7 +107,10 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .social-media-icons {
-        position: static;
+        position: relative; /* Change position to relative for mobile */
+        top: auto;
+        right: auto;
+        transform: none;
         margin-top: 20px;
         flex-direction: row;
         justify-content: center;
